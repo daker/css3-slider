@@ -1,0 +1,217 @@
+html, body, div, span, figure,
+h1, h2, h3, h4, p, a,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+article, aside, details, figure, figcaption,
+footer, header, hgroup, nav, section, img {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+}
+
+body {
+    background: #2ecc71;
+}
+
+h1 {
+    color: #fff;
+    font-size: 35px;
+    font-weight: 700;
+    font-family: "Open Sans", helvetica, sans-serif;
+    text-shadow: 0 3px 0 rgba(0, 0, 0, 0.2);
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+#content {
+    margin-top: 30px;
+}
+
+p.credit {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    text-align: center;
+    color: #fff;
+    font-size: 13px;
+    font-family: "Open Sans", helvetica, sans-serif;
+    font-style: italic;
+}
+
+p.credit a {
+    color: #fff;
+    text-decoration: none;
+}
+
+p.credit a:hover {
+    text-decoration: underline;
+}
+
+/* Slider CSS */
+
+.container {
+    width: 960px;
+    margin: 0 auto;
+    overflow: hidden;
+    text-align: center;
+    position: relative;
+}
+
+#slider {
+    width: 100%;
+    height: 100%;
+    -webkit-transform: translate3d(0,0,0);
+    -moz-transform: translate3d(0,0,0);
+    -ms-transform: translate3d(0,0,0);
+    -o-transform: translate3d(0,0,0);
+    transform: translate3d(0,0,0);
+    -webkit-transition: all 0.4s ease-in-out;
+    -moz-transition: all 0.4s ease-in-out;
+    -ms-transition: all 0.4s ease-in-out;
+    -o-transition: all 0.4s ease-in-out;
+    transition: all 0.4s ease-in-out;
+    overflow: hidden;
+}
+
+.pagination {
+    position: absolute;
+    width: 100%;
+    bottom: 20px;
+}
+
+.pagination .dot {
+    width: 18px;
+    height: 18px;
+    background: #24b662;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    border-radius: 50%;
+    display: inline-block;
+    margin: 0 4px;
+    -webkit-transition: all 300ms;
+    -moz-transition: all 300ms;
+    -ms-transition: all 300ms;
+    -o-transition: all 300ms;
+    transition: all 300ms;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+.pagination .dot span {
+    width: 18px;
+    height: 18px;
+    background: rgba(255, 255, 255, 0.4);
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    border-radius: 50%;
+    display: inline-block;
+    margin-left: -59px;
+}
+
+.pagination .dot.active span {
+    margin: 0;
+}
+
+.pagination .dot:hover {
+    background: #17aa56;
+}
+
+.arrow-left,
+.arrow-right {
+    position: absolute;
+    width: 60px;
+    height: 60px;
+    background: url('img/slider_nav.png') no-repeat 1px 2px;
+    top: 40%;
+    margin-top: -20px;
+    -webkit-transition: all .3s ease;
+    -moz-transition: all .3s ease;
+    -ms-transition: all .3s ease;
+    -o-transition: all .3s ease;
+    transition: all .3s ease;
+    opacity: 0;
+    display: block;
+    cursor: pointer;
+}
+
+.arrow-left {
+    left: -60px;
+}
+
+#content:hover .arrow-left {
+    left: 5px;
+    opacity: 1;
+}
+
+#content:hover .arrow-right {
+    right: 5px;
+    opacity: 1;
+}
+
+.arrow-right {
+    right: -60px;
+    background-position: -58px 2px;
+}
+
+.slide {
+    width: 960px;
+    height: 545px;
+    float: left;
+    position: relative;
+}
+
+.slide img {
+    width: 700px;
+    height: 467px;
+    -webkit-transform: translatez(0);
+    -webkit-box-shadow: 0 1px 2px rgba(0, 0, 0, 0.3),transparent 0 0 0,transparent 0 0 0,transparent 0 0 0,transparent 0 0 0;
+    -moz-box-shadow: 0 1px 2px rgba(0, 0, 0, 0.3),transparent 0 0 0,transparent 0 0 0,transparent 0 0 0,transparent 0 0 0;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.3),transparent 0 0 0,transparent 0 0 0,transparent 0 0 0,transparent 0 0 0;
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -o-border-radius: 5px;
+    border-radius: 5px;
+}
+
+.slide.active {
+    opacity: 1;
+    visibility: visible;
+}
+
+.slide:last-of-type {
+    margin: 0;
+}
+
+.slide .details {
+    width: 660px;
+    margin: 0 auto;
+    margin-top: 10px;
+    margin-bottom: 30px;
+    position: absolute;
+    bottom: 70px;
+    left: 145px;
+}
+
+.slide .details > h2 {
+    width: 700px;
+    margin: 0 auto;
+    margin-top: 10px;
+    text-align: left;
+    color: #fff;
+    font-size: 35px;
+    font-weight: 700;
+    font-family: "Open Sans", helvetica, sans-serif;
+    text-shadow: 0 3px 0 rgba(0, 0, 0, 0.2);
+}
+
+.slide .details > p {
+    width: 700px;
+    margin: 0 auto;
+    text-align: left;
+    color: #fff;
+    font-family: "Open Sans", helvetica, sans-serif;
+    font-weight: 600;
+    font-size: 15px;
+}
